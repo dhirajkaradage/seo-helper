@@ -1,0 +1,153 @@
+<h2>Statistics Dashboard</h2>
+<div class="row">
+  <!-- this is first part -->
+  <div class="col-md-8">
+    <div class="row">
+
+      <div class="col-md-12">
+        {{testingPipes | uppercase}}  <br>
+        {{testingPipes | lowercase}}  <br>
+        {{testingPipes | uppercase}}  <br>
+        {{testingPercentPipe | number: '2.1'}}  <br>
+        {{userRegistrationForm.value | json}}
+        <div class="" [formGroup]="userRegistrationForm">
+          <input type="text" formControlName="userName" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        {{usingFormBuilder.value | json}}
+        <div class="" [formGroup]="usingFormBuilder">
+          <input type="text" class="form-control" formControlName="userName" [ngClass]="{'is-invalid': usingFormBuilder.get('userName')?.invalid && (usingFormBuilder.get('userName')?.touched || usingFormBuilder.get('userName')?.dirty)}">
+          <div *ngIf="usingFormBuilder.get('userName')?.invalid && (usingFormBuilder.get('userName')?.touched || usingFormBuilder.get('userName')?.dirty)" class="text-danger">
+            User Name is mandatory *
+          </div>
+
+          <div formArrayName="mobileNos">
+            <div class="" *ngFor="let number of mobileNosArray.controls; let i = index" [formGroupName]="i">
+              <input type="number" formControlName="i"> 
+              <button (click)="removeNo(i)">delete</button>
+            </div>
+
+          </div>
+
+          <button (click)="addNewContactNo()">Add</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-head">Lorem ipsum - Statistics</div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, error eos doloribus nobis eligendi itaque suscipit
+            quibusdam quo corrupti illum, ex atque. Impedit, voluptate odit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-head">Lorem ipsum - Statistics</div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, error eos doloribus nobis eligendi itaque suscipit
+            quibusdam quo corrupti illum, ex atque. Impedit, voluptate odit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-head">
+            <strong>My Schedule</strong>
+          </div>
+          <div class="card-body">
+            <mat-card class="demo-inline-calendar-card">
+              <mat-calendar></mat-calendar>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="click()">Set Subject</button>
+
+  <!-- this is second part -->
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-head">Todays Schedule</div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-head">Todays Schedule</div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-head">Todays Schedule</div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiumm ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

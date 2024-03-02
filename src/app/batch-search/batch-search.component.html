@@ -1,0 +1,52 @@
+<p>Batch Google Search</p>
+<div class="card">
+  <div class="container">
+    <div class="row mt-4 mb-4">
+      <div class="col-md-12">
+        Entering data : &nbsp;&nbsp;
+        <input
+          class="form-check-input"
+          [(ngModel)]="filterValue"
+          value="withComma"
+          type="radio"
+          name="Search"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label fw-bold" for="flexRadioDefault1">
+          &nbsp; With Comma &nbsp; &nbsp;&nbsp;
+        </label>
+        <input
+          class="form-check-input"
+          [(ngModel)]="filterValue"
+          value="withNewLine"
+          type="radio"
+          name="Search"
+          id="flexRadioDefault2"
+        />
+        <label class="form-check-label fw-bold" for="flexRadioDefault2">
+          &nbsp; With New Line &nbsp;
+        </label>
+      </div>
+      <div class="col-md-12">
+        <label for="">
+          Searching Images : -
+          <input type="checkbox" class="form-check-input" [(ngModel)]="isSearchingImg" name="isSearchingImg">
+        </label>
+        {{isSearchingImg}}
+      </div>
+      <div class="col-md-12 mt-2">
+        <textarea
+          class="form-control"
+          rows="10"
+          name="userInputValue"
+          [(ngModel)]="userInputValue"
+        ></textarea>
+      </div>
+      <div class="col-md-12 mt-3 text-center">
+        <button class="btn btn-outline-success" (click)="searchUrl()">
+          Search CAGR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

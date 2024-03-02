@@ -1,0 +1,76 @@
+<p>products works!</p>
+<div class="card">
+  <div class="card-head">Practice Page asdf</div>
+  {{ nestedArrayPracticeForm.value | json }}
+  <div class="card-body">
+    <form [formGroup]="nestedArrayPracticeForm">
+      <div class="form-group row" formArrayName="weightVariants">
+        <div
+          class="col-md-12"
+          *ngFor="let item of weightVariantsArray.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <div class="form-group row">
+            <div class="col-md-2" formGroupName="weightMaster">
+              <label for="" class="form-label">Name</label>
+              <select name="" id="" class="form-select" formControlName="id">
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="col-md-8" formArrayName="colourVariants">
+              <div
+                class="row"
+                *ngFor="
+                  let item of getcolourVariants(i).controls;
+                  let ind = index
+                "
+                [formGroupName]="ind"
+              >
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-md-2" formGroupName="colourMaster">
+                      <label for="" class="form-label">Color</label>
+                      <select
+                        name=""
+                        id=""
+                        class="form-select"
+                        formControlName="id"
+                      >
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 mt-4">
+                      <button
+                        class="btn btn-outline-danger mt-2"
+                        (click)="removecolourVariants(i, ind)"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mt-4">
+              <button
+                class="btn btn-outline-success mt-2"
+                (click)="addMorecolourVariants(i)"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-outline-success mt-5"
+          (click)="addMoreWeightVarient()"
+        >
+          Add More
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
