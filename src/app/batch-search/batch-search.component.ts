@@ -41,8 +41,8 @@ export class BatchSearchComponent implements OnInit {
   }
 
   openNewTab(searchValue: any) {
-    // const url = 'https://www.google.co.in/search?q=' + searchValue + ' market + cagr';
-    const url = 'https://www.google.co.in/search?q=' + searchValue + '?gl=us&hl=en&pws=0&gws_rd=cr';
+    const url = 'https://www.google.co.in/search?q=' + searchValue;
+    // const url = 'https://www.google.co.in/search?q=' + searchValue + '?gl=us&hl=en&pws=0&gws_rd=cr';
     window.open(url, '_blank');
   }
 

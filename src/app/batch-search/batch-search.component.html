@@ -27,13 +27,13 @@
           &nbsp; With New Line &nbsp;
         </label>
       </div>
-      <div class="col-md-12">
+      <!-- <div class="col-md-12">
         <label for="">
           Searching Images : -
           <input type="checkbox" class="form-check-input" [(ngModel)]="isSearchingImg" name="isSearchingImg">
         </label>
         {{isSearchingImg}}
-      </div>
+      </div> -->
       <div class="col-md-12 mt-2">
         <textarea
           class="form-control"
@@ -43,7 +43,7 @@
         ></textarea>
       </div>
       <div class="col-md-12 mt-3 text-center">
-        <button class="btn btn-outline-success" (click)="searchUrl()">
+        <button class="btn btn-outline-success" (click)="createBatchSearch()">
           Search CAGR
         </button>
       </div>
